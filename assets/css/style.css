@@ -4669,7 +4669,7 @@ iframe {
 }
 .scrollup {
   position: fixed;
-  bottom: 235px;
+  bottom: 229px;
   left: 89%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4888,6 +4888,7 @@ iframe {
   font-weight: 400;
   color: #575c5f;
   padding-bottom: 89px;
+  text-align: center;
 }
 .education {
   background: #fff;
@@ -4903,14 +4904,13 @@ iframe {
 }
 .education .heading-lower {
   text-align: center;
-}
-.education .heading-lower span {
-  font-weight: 700;
+  line-height: 1;
 }
 .education .heading-lower .heading-small {
   display: block;
   font-size: 0.389em;
-  padding-bottom: 25px;
+  padding-top: 32px;
+  padding-bottom: 10px;
   font-weight: 400;
 }
 .education p {
