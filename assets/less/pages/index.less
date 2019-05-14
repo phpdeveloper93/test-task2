@@ -1,0 +1,274 @@
+//hero heading
+.hero-image {
+	.bg-img('hero-bg.jpg');    
+    min-height: 543px;
+    height: 100%;
+}
+.hero-heading {
+    padding: 290px 0 51px 0;
+    h1 {       
+        font-size: 7.143em;//100px
+        font-weight: 700;
+        color: #fff;
+        line-height: 1;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+    }	
+    p {  
+        font-size: 1.286em;//18px
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-top: 14px;
+    }
+}
+.hero-heading, .short-desc {
+	padding-left: 34px;
+}
+.short-desc {
+    background: #fff;
+    border-top: 5px solid @accent;
+    padding: 32px 18% 32px 12%;
+    margin-bottom: -63px;
+    box-shadow: 0px 30px 80px 0px rgba(0, 0, 0, 0.1);
+    p {
+        font-size: 1.286em;//18px
+        color: @font;
+        font-weight: 400;
+        line-height: 1.67;
+        letter-spacing: 0.025em;
+    }
+    span {
+        color: @accent;
+        text-transform: uppercase;
+    }
+}
+@media(max-width:576px){
+    .hero-heading {
+        h1 {
+            font-size: 5em;
+        }
+        p {
+            font-size: 1.143em;//16px
+        }
+    }
+}
+
+//Section popular cities
+.popular {
+	padding-top: 160px;
+    background: @bg;
+    [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+.img-wrapper {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.heading {
+    position: relative;
+    font-size: 1.714em;//24px
+	font-weight: 700;
+    color: @font;
+    text-transform: uppercase;
+    padding-bottom: 83px; 
+    line-height: 1.2; //24/20
+    letter-spacing: 0.2em;
+    &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 98px;
+        margin-bottom: 20px;
+        margin-left: -18px;
+        background: @font;
+        opacity: 0.3;
+    }
+    &:after {  
+        position: absolute;
+        content: ''; 
+        top: 66px;
+        display: inline-block;
+        height: 1px;
+        width: 60px;              
+        background: @font;
+        opacity: 0.3;
+    }
+}
+.item {   
+    height: 100%;
+    background: #fff;
+    border-bottom: 2px solid @accent;
+    box-shadow: 0px 30px 80px 0px rgba(0, 0, 0, 0.1);    
+}
+.item-heading {
+	font-size: 1.714em;//24px
+    font-weight: 400;
+    color: @font;
+    line-height: 1.416;//34/24    
+    padding-bottom: 22px;
+}
+.item-text {
+    padding: 23px 10% 34px 5%;
+    p {
+        font-size: 1.143em;//16px
+        line-height: 1.5; //24/14
+        color: @font-light;
+    }
+}
+
+//Why Larnaca Section
+.why-larnaca { 
+    padding-bottom: 102px;
+    .content {
+        margin-left: 97px;
+        padding-top: 124px;        
+        p {
+            font-size: 1.714em;//24px
+            font-weight: 400;
+            color: @font;
+            line-height: 1.5;
+        }    
+    } 
+    .heading {        
+	    padding-bottom: 60px;
+        &:after {
+            top: 95px;
+        }
+    }
+}
+//media queries for why-larnaca section
+@media(max-width:992px){
+    .why-larnaca {
+        .content {
+            margin-left: 30px;
+            p {
+                font-size: 1.429em;//20px
+            }
+        }
+    }
+}
+
+//Section education
+.heading-lower {    
+    font-size: 2.571em;//36px
+    font-weight: 400;
+    color: @font;
+    padding-bottom: 89px;
+}
+.education {    
+    background: #fff;
+    position: relative;
+	.background-image {
+	    .bg-img('background-img.jpg');
+        height:  385px;
+    }
+    .heading-lower {
+        text-align: center;
+        span {
+            font-weight: 700;
+        }
+        .heading-small {
+            display: block;
+            font-size: 0.389em;//14px
+            padding-bottom: 25px;
+            font-weight: 400;
+        }
+    }
+    p {
+        font-size: 1.143em;//16px
+        font-weight: 400;
+        line-height: 1.5;
+        color: @font;
+        padding: 30px 6% 0;
+    }
+}
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: @bg;
+}
+//section nature-beauty
+.nature-beauty {
+	padding-top: 134px;  
+    padding-bottom: 111px;
+    background: @bg;
+    .heading-lower {
+	    font-weight: 700;
+        padding-right: 5%;
+        padding-bottom: 44px;
+    }
+    p, .text {
+        font-size: 1.286em;//18px
+        font-weight: 400;
+        line-height: 1.56;
+        color: @font;
+    }
+    .text {
+        text-align: center;
+    }
+    .content {
+        p {            
+            padding-right: 5%;
+            padding-left: 5%;
+            border-left: 1px solid @accent;        
+        }
+    } 
+    h3 {
+        padding: 141px 3% 27px;
+        font-size: 1.714em;//24px
+        font-weight: 600;
+        color: @font;
+        text-align: center;
+        &:after {
+            content: '';
+            display: block;
+            width: 78px;
+            height: 1px;
+            background: @accent;
+            margin: auto;
+            margin-top: 35px;
+        }
+    }    
+}
+.item-left, .item-right {
+	display: flex;
+    flex-direction: column;
+}
+.item-left {
+	margin-right: 34px; 
+    .img-wrapper {
+        order: 1;
+    }
+    .content {
+        margin-top: 60px;
+        order: 2;
+    }
+}
+.item-right {
+	margin-left: 34px; 
+    .img-wrapper {
+        order: 2;
+    }
+    .content {
+        margin-bottom: 20px;
+        order: 1;
+        p {
+            padding-bottom: 28px;
+        }
+    }
+}
+//media queries for section nature beauty
+@media(max-width: 768px){
+    .item-left, .item-right {
+	    margin: 0;
+        padding-bottom: 30px;
+    }
+}
