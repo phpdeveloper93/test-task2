@@ -4069,6 +4069,26 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-r:before {
+  content: "\e900";
+}
+.icon-l:before {
+  content: "\e901";
+}
 /*Basic tags and general rules*/
 body {
   margin: 0;
@@ -4368,26 +4388,40 @@ ul.slick-dots li:hover {
 .next-arrow,
 .next,
 .prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 32px;
   height: 30px;
-  font-size: 1.286em;
-  font-weight: 600;
+}
+.prev-arrow a,
+.next-arrow a {
+  font-size: 1.143em;
   color: #575c5f;
   cursor: pointer;
 }
-.prev-arrow:hover,
-.next-arrow:hover {
+.prev-arrow a i,
+.next-arrow a i {
+  font-weight: 700;
+}
+.prev-arrow a:hover,
+.next-arrow a:hover {
   color: #b98b36;
 }
 .next-arrow,
 .next {
-  text-align: right;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 .prev-arrow,
 .prev {
   border-right: 1px solid rgba(87, 92, 95, 0.2);
 }
-.slick-disabled {
+.slick-disabled a {
   color: rgba(87, 92, 95, 0.2);
 }
 @media (max-width: 992px) {
@@ -4421,15 +4455,39 @@ ul.slick-dots li:hover {
   -webkit-box-shadow: 0px 30px 80px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 30px 80px 0px rgba(0, 0, 0, 0.1);
   margin-right: 34px;
+  height: 717px;
 }
-.next:hover {
-  color: #b98b36;
+.nav-arr .slick-disabled a {
+  color: rgba(87, 92, 95, 0.2);
 }
-.prev:hover {
+.prev,
+.next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  height: 30px;
+}
+.prev a,
+.next a {
+  font-size: 1.143em;
+  color: #575c5f;
+  cursor: pointer;
+}
+.prev a i,
+.next a i {
+  font-weight: 700;
+}
+.prev a:hover,
+.next a:hover {
   color: #b98b36;
 }
 .slide-controls {
   position: relative;
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4493,6 +4551,10 @@ ul.slick-dots li:hover {
   cursor: pointer;
   font-size: 1em;
   color: #575c5f;
+}
+.previous-arr i,
+.next-arr i {
+  font-size: 16px;
 }
 .previous-arr:hover,
 .next-arr:hover {
@@ -4698,7 +4760,7 @@ iframe {
     padding-bottom: 30px;
   }
   .site-footer .contact-info {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .footer-bottom {
     display: -webkit-box;
@@ -4708,18 +4770,15 @@ iframe {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   .horizontal-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     text-align: left;
   }
   .horizontal-nav li {
@@ -4727,6 +4786,9 @@ iframe {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 15px;
+  }
+  .copy {
+    padding-left: 20px;
   }
   .scrollup {
     margin-top: 30px;
@@ -4857,7 +4919,7 @@ iframe {
   color: #a29c9b;
 }
 .why-larnaca {
-  padding-bottom: 102px;
+  padding-bottom: 136px;
 }
 .why-larnaca .content {
   margin-left: 97px;
@@ -4887,7 +4949,7 @@ iframe {
   font-size: 2.571em;
   font-weight: 400;
   color: #575c5f;
-  padding-bottom: 89px;
+  padding-bottom: 95px;
   text-align: center;
 }
 .education {
