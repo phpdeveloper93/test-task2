@@ -4722,7 +4722,7 @@ iframe {
   font-weight: 600;
 }
 .copy {
-  margin-right: 5%;
+  margin-right: 9%;
 }
 .copy p {
   font-size: 1.143em;
@@ -4732,7 +4732,7 @@ iframe {
 .scrollup {
   position: fixed;
   bottom: 229px;
-  left: 89%;
+  left: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
